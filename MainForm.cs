@@ -9,11 +9,12 @@ namespace Dualverse
 		public MainForm()
 		{
 			InitializeComponent();
+			this.WindowState = FormWindowState.Maximized;
 			ResizeComponent();
 			InitializeAsync();
 		}
 
-		async void InitializeAsync()
+		private async void InitializeAsync()
 		{
 			await webView2Left.EnsureCoreWebView2Async(null);
 			webView2Left.CoreWebView2.Navigate("https://twitter.com/");
@@ -28,7 +29,7 @@ namespace Dualverse
 			ResizeComponent();
 		}
 
-		void ResizeComponent()
+		private void ResizeComponent()
 		{
 			webView2Left.Width = this.Width / 2;
 		}
