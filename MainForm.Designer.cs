@@ -40,6 +40,7 @@
 			this.webView2Left.CreationProperties = null;
 			this.webView2Left.DefaultBackgroundColor = System.Drawing.Color.White;
 			this.webView2Left.Dock = System.Windows.Forms.DockStyle.Left;
+			this.webView2Left.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
 			this.webView2Left.Location = new System.Drawing.Point(0, 0);
 			this.webView2Left.Name = "webView2Left";
 			this.webView2Left.Size = new System.Drawing.Size(512, 561);
@@ -52,6 +53,7 @@
 			this.webView2Right.CreationProperties = null;
 			this.webView2Right.DefaultBackgroundColor = System.Drawing.Color.White;
 			this.webView2Right.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.webView2Right.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
 			this.webView2Right.Location = new System.Drawing.Point(512, 0);
 			this.webView2Right.Name = "webView2Right";
 			this.webView2Right.Size = new System.Drawing.Size(496, 561);
