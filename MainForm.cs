@@ -31,7 +31,7 @@ namespace Dualverse
 
 		private void ResizeComponent()
 		{
-			webView2Left.Width = this.Width / 2;
+			panelLeft.Width = this.Width / 2;
 		}
 
 		private void NewWindowRequested(object sender, CoreWebView2NewWindowRequestedEventArgs e)
