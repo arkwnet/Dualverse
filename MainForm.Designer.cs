@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.panelLeft = new System.Windows.Forms.Panel();
 			this.webView2Left = new Microsoft.Web.WebView2.WinForms.WebView2();
 			this.panelRight = new System.Windows.Forms.Panel();
@@ -89,6 +90,7 @@
 			this.ClientSize = new System.Drawing.Size(1008, 561);
 			this.Controls.Add(this.panelRight);
 			this.Controls.Add(this.panelLeft);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MainForm";
 			this.Text = "Dualverse";
 			this.Resize += new System.EventHandler(this.MainForm_Resize);
