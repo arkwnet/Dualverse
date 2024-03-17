@@ -60,6 +60,7 @@
 			this.webView2Left.Size = new System.Drawing.Size(512, 561);
 			this.webView2Left.TabIndex = 1;
 			this.webView2Left.ZoomFactor = 1D;
+			this.webView2Left.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView2Left_NavigationCompleted);
 			// 
 			// panelRight
 			// 
@@ -82,6 +83,7 @@
 			this.webView2Right.Size = new System.Drawing.Size(496, 561);
 			this.webView2Right.TabIndex = 2;
 			this.webView2Right.ZoomFactor = 1D;
+			this.webView2Right.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView2Right_NavigationCompleted);
 			// 
 			// MainForm
 			// 

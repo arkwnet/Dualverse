@@ -1,14 +1,20 @@
 using Microsoft.Web.WebView2.Core;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using System.Windows.Threading;
 
 namespace Dualverse
 {
 	public partial class MainForm : Form
 	{
+		SplashForm splashForm = new SplashForm();
+		int[] status = { 0, 0 };
+
 		public MainForm()
 		{
 			InitializeComponent();
+			splashForm.Show();
 			this.WindowState = FormWindowState.Maximized;
 			ResizeComponent();
 			InitializeAsync();
@@ -43,6 +49,30 @@ namespace Dualverse
 				UseShellExecute = true,
 			};
 			Process.Start(processStartInfo);
+		}
+
+		private void webView2Left_NavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs e)
+		{
+			status[0] = 1;
+			CloseSplashForm();
+		}
+
+		private void webView2Right_NavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs e)
+		{
+			status[1] = 1;
+			CloseSplashForm();
+		}
+
+		private void CloseSplashForm()
+		{
+			if (status[0] == 1 && status[1] == 1) {
+				DispatcherTimer timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+				timer.Start();
+				timer.Tick += (s, args) => {
+					timer.Stop();
+					splashForm.Close();
+				};
+			}
 		}
 	}
 }
