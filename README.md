@@ -1,4 +1,4 @@
-# Dualverse
+<img src="./design/github.png" height="100" alt="Dualverse">
 
 ## License
 
