@@ -74,5 +74,15 @@ namespace Dualverse
 				};
 			}
 		}
+
+		private void reloadButtonLeft_Click(object sender, EventArgs e)
+		{
+			webView2Left.Reload();
+		}
+
+		private void reloadButtonRight_Click(object sender, EventArgs e)
+		{
+			webView2Right.Reload();
+		}
 	}
 }
