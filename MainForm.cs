@@ -8,6 +8,7 @@ namespace Dualverse
 {
 	public partial class MainForm : Form
 	{
+		AboutForm aboutForm = null;
 		SplashForm splashForm = new SplashForm();
 		int[] status = { 0, 0 };
 
@@ -83,6 +84,19 @@ namespace Dualverse
 		private void reloadButtonRight_Click(object sender, EventArgs e)
 		{
 			webView2Right.Reload();
+		}
+
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (aboutForm == null || aboutForm.IsDisposed) {
+				aboutForm = new AboutForm();
+				aboutForm.Show();
+			}
+		}
+
+		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 	}
 }

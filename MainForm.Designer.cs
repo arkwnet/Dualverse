@@ -30,19 +30,24 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.panelLeft = new System.Windows.Forms.Panel();
+			this.webView2Left = new Microsoft.Web.WebView2.WinForms.WebView2();
 			this.toolStripLeft = new System.Windows.Forms.ToolStrip();
 			this.reloadButtonLeft = new System.Windows.Forms.ToolStripButton();
-			this.webView2Left = new Microsoft.Web.WebView2.WinForms.WebView2();
 			this.panelRight = new System.Windows.Forms.Panel();
+			this.webView2Right = new Microsoft.Web.WebView2.WinForms.WebView2();
 			this.toolStripRight = new System.Windows.Forms.ToolStrip();
 			this.reloadButtonRight = new System.Windows.Forms.ToolStripButton();
-			this.webView2Right = new Microsoft.Web.WebView2.WinForms.WebView2();
+			this.menuStrip = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.panelLeft.SuspendLayout();
-			this.toolStripLeft.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.webView2Left)).BeginInit();
+			this.toolStripLeft.SuspendLayout();
 			this.panelRight.SuspendLayout();
-			this.toolStripRight.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.webView2Right)).BeginInit();
+			this.toolStripRight.SuspendLayout();
+			this.menuStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panelLeft
@@ -50,10 +55,24 @@
 			this.panelLeft.Controls.Add(this.webView2Left);
 			this.panelLeft.Controls.Add(this.toolStripLeft);
 			this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-			this.panelLeft.Location = new System.Drawing.Point(0, 0);
+			this.panelLeft.Location = new System.Drawing.Point(0, 24);
 			this.panelLeft.Name = "panelLeft";
-			this.panelLeft.Size = new System.Drawing.Size(512, 561);
+			this.panelLeft.Size = new System.Drawing.Size(512, 537);
 			this.panelLeft.TabIndex = 2;
+			// 
+			// webView2Left
+			// 
+			this.webView2Left.AllowExternalDrop = true;
+			this.webView2Left.CreationProperties = null;
+			this.webView2Left.DefaultBackgroundColor = System.Drawing.Color.White;
+			this.webView2Left.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.webView2Left.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.webView2Left.Location = new System.Drawing.Point(0, 25);
+			this.webView2Left.Name = "webView2Left";
+			this.webView2Left.Size = new System.Drawing.Size(512, 512);
+			this.webView2Left.TabIndex = 1;
+			this.webView2Left.ZoomFactor = 1D;
+			this.webView2Left.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView2Left_NavigationCompleted);
 			// 
 			// toolStripLeft
 			// 
@@ -75,29 +94,29 @@
 			this.reloadButtonLeft.Text = "toolStripButton1";
 			this.reloadButtonLeft.Click += new System.EventHandler(this.reloadButtonLeft_Click);
 			// 
-			// webView2Left
-			// 
-			this.webView2Left.AllowExternalDrop = true;
-			this.webView2Left.CreationProperties = null;
-			this.webView2Left.DefaultBackgroundColor = System.Drawing.Color.White;
-			this.webView2Left.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.webView2Left.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-			this.webView2Left.Location = new System.Drawing.Point(0, 25);
-			this.webView2Left.Name = "webView2Left";
-			this.webView2Left.Size = new System.Drawing.Size(512, 536);
-			this.webView2Left.TabIndex = 1;
-			this.webView2Left.ZoomFactor = 1D;
-			this.webView2Left.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView2Left_NavigationCompleted);
-			// 
 			// panelRight
 			// 
 			this.panelRight.Controls.Add(this.webView2Right);
 			this.panelRight.Controls.Add(this.toolStripRight);
 			this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panelRight.Location = new System.Drawing.Point(512, 0);
+			this.panelRight.Location = new System.Drawing.Point(512, 24);
 			this.panelRight.Name = "panelRight";
-			this.panelRight.Size = new System.Drawing.Size(496, 561);
+			this.panelRight.Size = new System.Drawing.Size(496, 537);
 			this.panelRight.TabIndex = 3;
+			// 
+			// webView2Right
+			// 
+			this.webView2Right.AllowExternalDrop = true;
+			this.webView2Right.CreationProperties = null;
+			this.webView2Right.DefaultBackgroundColor = System.Drawing.Color.White;
+			this.webView2Right.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.webView2Right.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.webView2Right.Location = new System.Drawing.Point(0, 25);
+			this.webView2Right.Name = "webView2Right";
+			this.webView2Right.Size = new System.Drawing.Size(496, 512);
+			this.webView2Right.TabIndex = 2;
+			this.webView2Right.ZoomFactor = 1D;
+			this.webView2Right.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView2Right_NavigationCompleted);
 			// 
 			// toolStripRight
 			// 
@@ -119,19 +138,38 @@
 			this.reloadButtonRight.Text = "toolStripButton1";
 			this.reloadButtonRight.Click += new System.EventHandler(this.reloadButtonRight_Click);
 			// 
-			// webView2Right
+			// menuStrip
 			// 
-			this.webView2Right.AllowExternalDrop = true;
-			this.webView2Right.CreationProperties = null;
-			this.webView2Right.DefaultBackgroundColor = System.Drawing.Color.White;
-			this.webView2Right.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.webView2Right.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-			this.webView2Right.Location = new System.Drawing.Point(0, 25);
-			this.webView2Right.Name = "webView2Right";
-			this.webView2Right.Size = new System.Drawing.Size(496, 536);
-			this.webView2Right.TabIndex = 2;
-			this.webView2Right.ZoomFactor = 1D;
-			this.webView2Right.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webView2Right_NavigationCompleted);
+			this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+			this.menuStrip.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip.Name = "menuStrip";
+			this.menuStrip.Size = new System.Drawing.Size(1008, 24);
+			this.menuStrip.TabIndex = 4;
+			this.menuStrip.Text = "menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.exitToolStripMenuItem});
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+			this.fileToolStripMenuItem.Text = "ファイル(&F)";
+			// 
+			// aboutToolStripMenuItem
+			// 
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+			this.aboutToolStripMenuItem.Text = "Dualverse について(&A)";
+			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+			this.exitToolStripMenuItem.Text = "終了(&X)";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -140,21 +178,26 @@
 			this.ClientSize = new System.Drawing.Size(1008, 561);
 			this.Controls.Add(this.panelRight);
 			this.Controls.Add(this.panelLeft);
+			this.Controls.Add(this.menuStrip);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MainMenuStrip = this.menuStrip;
 			this.Name = "MainForm";
 			this.Text = "Dualverse";
 			this.Resize += new System.EventHandler(this.MainForm_Resize);
 			this.panelLeft.ResumeLayout(false);
 			this.panelLeft.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.webView2Left)).EndInit();
 			this.toolStripLeft.ResumeLayout(false);
 			this.toolStripLeft.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.webView2Left)).EndInit();
 			this.panelRight.ResumeLayout(false);
 			this.panelRight.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.webView2Right)).EndInit();
 			this.toolStripRight.ResumeLayout(false);
 			this.toolStripRight.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.webView2Right)).EndInit();
+			this.menuStrip.ResumeLayout(false);
+			this.menuStrip.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -168,6 +211,10 @@
 		private System.Windows.Forms.ToolStripButton reloadButtonLeft;
 		private System.Windows.Forms.ToolStrip toolStripRight;
 		private System.Windows.Forms.ToolStripButton reloadButtonRight;
+		private System.Windows.Forms.MenuStrip menuStrip;
+		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 	}
 }
 
