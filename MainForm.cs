@@ -8,6 +8,7 @@ namespace Dualverse
 {
 	public partial class MainForm : Form
 	{
+		Settings settings = new Settings();
 		AboutForm aboutForm = null;
 		SplashForm splashForm = new SplashForm();
 		int[] status = { 0, 0 };
@@ -24,10 +25,10 @@ namespace Dualverse
 		private async void InitializeAsync()
 		{
 			await webView2Left.EnsureCoreWebView2Async(null);
-			webView2Left.CoreWebView2.Navigate("https://twitter.com/");
+			webView2Left.CoreWebView2.Navigate(settings.LeftUri);
 			webView2Left.CoreWebView2.NewWindowRequested += NewWindowRequested;
 			await webView2Right.EnsureCoreWebView2Async(null);
-			webView2Right.CoreWebView2.Navigate("https://misskey.io/");
+			webView2Right.CoreWebView2.Navigate(settings.RightUri);
 			webView2Right.CoreWebView2.NewWindowRequested += NewWindowRequested;
 		}
 
