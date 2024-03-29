@@ -8,6 +8,9 @@ namespace Dualverse
 		public AboutForm()
 		{
 			InitializeComponent();
+			FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location);
+			versionLabel.Text = "Version " + fileVersionInfo.FileMajorPart + "." + fileVersionInfo.FileMinorPart + "." + fileVersionInfo.FilePrivatePart;
+			copyrightLabel1.Text = fileVersionInfo.LegalCopyright + ".";
 		}
 
 		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -20,7 +23,7 @@ namespace Dualverse
 			Process.Start(processStartInfo);
 		}
 
-		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		private void logoPictureBox_Click(object sender, System.EventArgs e)
 		{
 			ProcessStartInfo processStartInfo = new ProcessStartInfo()
 			{
