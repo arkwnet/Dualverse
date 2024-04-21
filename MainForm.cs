@@ -10,6 +10,7 @@ namespace Dualverse
 	{
 		Settings settings = new Settings();
 		AboutForm aboutForm = null;
+		SettingsForm settingsForm = null;
 		SplashForm splashForm = new SplashForm();
 		int[] status = { 0, 0 };
 
@@ -85,6 +86,14 @@ namespace Dualverse
 		private void reloadButtonRight_Click(object sender, EventArgs e)
 		{
 			webView2Right.Reload();
+		}
+
+		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (settingsForm == null || settingsForm.IsDisposed) {
+				settingsForm = new SettingsForm();
+				settingsForm.Show();
+			}
 		}
 
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
