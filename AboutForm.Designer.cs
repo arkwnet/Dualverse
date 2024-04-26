@@ -41,17 +41,17 @@
 			// 
 			this.versionLabel.AutoSize = true;
 			this.versionLabel.BackColor = System.Drawing.Color.Transparent;
-			this.versionLabel.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.versionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.versionLabel.Location = new System.Drawing.Point(267, 110);
 			this.versionLabel.Name = "versionLabel";
-			this.versionLabel.Size = new System.Drawing.Size(0, 20);
+			this.versionLabel.Size = new System.Drawing.Size(0, 21);
 			this.versionLabel.TabIndex = 0;
 			// 
 			// copyrightLabel1
 			// 
 			this.copyrightLabel1.AutoSize = true;
 			this.copyrightLabel1.BackColor = System.Drawing.Color.Transparent;
-			this.copyrightLabel1.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.copyrightLabel1.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.copyrightLabel1.Location = new System.Drawing.Point(268, 140);
 			this.copyrightLabel1.Name = "copyrightLabel1";
 			this.copyrightLabel1.Size = new System.Drawing.Size(0, 17);
@@ -72,10 +72,10 @@
 			// 
 			this.linkLabel1.AutoSize = true;
 			this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-			this.linkLabel1.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.linkLabel1.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.linkLabel1.Location = new System.Drawing.Point(268, 185);
 			this.linkLabel1.Name = "linkLabel1";
-			this.linkLabel1.Size = new System.Drawing.Size(163, 17);
+			this.linkLabel1.Size = new System.Drawing.Size(149, 17);
 			this.linkLabel1.TabIndex = 4;
 			this.linkLabel1.TabStop = true;
 			this.linkLabel1.Text = "ソースコードを取得 (GitHub)";
@@ -85,10 +85,10 @@
 			// 
 			this.copyrightLabel2.AutoSize = true;
 			this.copyrightLabel2.BackColor = System.Drawing.Color.Transparent;
-			this.copyrightLabel2.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.copyrightLabel2.Location = new System.Drawing.Point(268, 158);
+			this.copyrightLabel2.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.copyrightLabel2.Location = new System.Drawing.Point(268, 156);
 			this.copyrightLabel2.Name = "copyrightLabel2";
-			this.copyrightLabel2.Size = new System.Drawing.Size(213, 17);
+			this.copyrightLabel2.Size = new System.Drawing.Size(193, 17);
 			this.copyrightLabel2.TabIndex = 5;
 			this.copyrightLabel2.Text = "Licensed under the MIT License.";
 			// 
