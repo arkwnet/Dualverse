@@ -98,10 +98,10 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(624, 321);
+			this.Controls.Add(this.copyrightLabel1);
 			this.Controls.Add(this.copyrightLabel2);
 			this.Controls.Add(this.linkLabel1);
 			this.Controls.Add(this.logoPictureBox);
-			this.Controls.Add(this.copyrightLabel1);
 			this.Controls.Add(this.versionLabel);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
