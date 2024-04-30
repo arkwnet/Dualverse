@@ -1,5 +1,3 @@
-using System.Windows.Forms;
-
 namespace Dualverse
 {
 	internal class Service
