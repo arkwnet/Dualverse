@@ -1,6 +1,7 @@
 using Microsoft.Web.WebView2.Core;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 using System.Windows.Threading;
 
@@ -8,17 +9,29 @@ namespace Dualverse
 {
 	public partial class MainForm : Form
 	{
-		Settings settings = new Settings();
-		AboutForm aboutForm = null;
-		SettingsForm settingsForm = null;
-		SplashForm splashForm = new SplashForm();
 		int[] status = { 0, 0 };
+		private const string fileName = "Dualverse.sav";
+		Settings settings = new Settings();
+		AboutForm aboutForm;
+		SettingsForm settingsForm;
+		SplashForm splashForm = new SplashForm();
+
+		private static MainForm _mainFormInstance;
+		public static MainForm MainFormInstance { get => _mainFormInstance; set => _mainFormInstance = value; }
+		public Settings MainFormSettings { get => settings; set => settings = value; }
 
 		public MainForm()
 		{
 			InitializeComponent();
+			_mainFormInstance = this;
 			splashForm.Show();
 			this.WindowState = FormWindowState.Maximized;
+			if (File.Exists(fileName)) {
+				System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
+				StreamReader streamReader = new StreamReader(fileName, new System.Text.UTF8Encoding(false));
+				settings = (Settings)serializer.Deserialize(streamReader);
+				streamReader.Close();
+			}
 			ResizeComponent();
 			InitializeAsync();
 		}
@@ -91,7 +104,7 @@ namespace Dualverse
 		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (settingsForm == null || settingsForm.IsDisposed) {
-				settingsForm = new SettingsForm();
+				settingsForm = new SettingsForm(fileName);
 				settingsForm.Show();
 			}
 		}

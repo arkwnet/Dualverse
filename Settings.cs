@@ -1,3 +1,6 @@
+using Dualverse.Properties;
+using System.IO;
+
 namespace Dualverse
 {
 	public class Settings
@@ -21,6 +24,14 @@ namespace Dualverse
 		{
 			leftUri = "https://twitter.com/";
 			rightUri = "https://misskey.io/";
+		}
+
+		public void Save(string fileName)
+		{
+			System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
+			StreamWriter streamWriter = new StreamWriter(fileName, false, new System.Text.UTF8Encoding(false));
+			serializer.Serialize(streamWriter, this);
+			streamWriter.Close();
 		}
 	}
 }
