@@ -91,14 +91,14 @@ namespace Dualverse
 			}
 		}
 
-		private void reloadButtonLeft_Click(object sender, EventArgs e)
+		public void reloadButtonLeft_Click(object sender, EventArgs e)
 		{
-			webView2Left.Reload();
+			webView2Left.CoreWebView2.Navigate(settings.LeftUri);
 		}
 
-		private void reloadButtonRight_Click(object sender, EventArgs e)
+		public void reloadButtonRight_Click(object sender, EventArgs e)
 		{
-			webView2Right.Reload();
+			webView2Right.CoreWebView2.Navigate(settings.RightUri);
 		}
 
 		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)

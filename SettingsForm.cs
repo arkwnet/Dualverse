@@ -51,12 +51,14 @@ namespace Dualverse
 		{
 			mainFormInstance.MainFormSettings.LeftUri = serviceLeftText.Text;
 			mainFormInstance.MainFormSettings.Save(fileName);
+			mainFormInstance.reloadButtonLeft_Click(sender, e);
 		}
 
 		private void serviceRightButton_Click(object sender, System.EventArgs e)
 		{
 			mainFormInstance.MainFormSettings.RightUri = serviceRightText.Text;
 			mainFormInstance.MainFormSettings.Save(fileName);
+			mainFormInstance.reloadButtonRight_Click(sender, e);
 		}
 
 		private void serviceLeftCombo_SelectedIndexChanged(object sender, System.EventArgs e)
