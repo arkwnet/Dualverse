@@ -22,8 +22,8 @@ namespace Dualverse
 
 		public Settings()
 		{
-			leftUri = "https://twitter.com/";
-			rightUri = "https://misskey.io/";
+			leftUri = "";
+			rightUri = "";
 		}
 
 		public void Save(string fileName)

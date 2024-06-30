@@ -31,6 +31,10 @@ namespace Dualverse
 				StreamReader streamReader = new StreamReader(fileName, new System.Text.UTF8Encoding(false));
 				settings = (Settings)serializer.Deserialize(streamReader);
 				streamReader.Close();
+			} else {
+				settings.LeftUri = "https://twitter.com/";
+				settings.RightUri = "https://misskey.io/";
+				settings.Save(fileName);
 			}
 			ResizeComponent();
 			InitializeAsync();
