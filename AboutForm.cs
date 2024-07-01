@@ -9,7 +9,7 @@ namespace Dualverse
 		{
 			InitializeComponent();
 			FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location);
-			versionLabel.Text = "Version " + fileVersionInfo.FileMajorPart + "." + fileVersionInfo.FileMinorPart + "." + fileVersionInfo.FilePrivatePart;
+			versionLabel.Text = "Version " + fileVersionInfo.FileMajorPart + "." + fileVersionInfo.FileMinorPart + "." + fileVersionInfo.FileBuildPart;
 			copyrightLabel1.Text = fileVersionInfo.LegalCopyright + ".";
 		}
 

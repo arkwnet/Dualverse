@@ -93,7 +93,7 @@
 			this.reloadButtonLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.reloadButtonLeft.Name = "reloadButtonLeft";
 			this.reloadButtonLeft.Size = new System.Drawing.Size(23, 22);
-			this.reloadButtonLeft.Text = "toolStripButton1";
+			this.reloadButtonLeft.Text = "再読み込み";
 			this.reloadButtonLeft.Click += new System.EventHandler(this.reloadButtonLeft_Click);
 			// 
 			// panelRight
@@ -137,7 +137,7 @@
 			this.reloadButtonRight.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.reloadButtonRight.Name = "reloadButtonRight";
 			this.reloadButtonRight.Size = new System.Drawing.Size(23, 22);
-			this.reloadButtonRight.Text = "toolStripButton1";
+			this.reloadButtonRight.Text = "再読み込み";
 			this.reloadButtonRight.Click += new System.EventHandler(this.reloadButtonRight_Click);
 			// 
 			// menuStrip
