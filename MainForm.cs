@@ -1,6 +1,7 @@
 using Microsoft.Web.WebView2.Core;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 using System.Windows.Threading;
 
@@ -8,16 +9,33 @@ namespace Dualverse
 {
 	public partial class MainForm : Form
 	{
-		Settings settings = new Settings();
-		AboutForm aboutForm = null;
-		SplashForm splashForm = new SplashForm();
 		int[] status = { 0, 0 };
+		private const string fileName = "Dualverse.sav";
+		Settings settings = new Settings();
+		AboutForm aboutForm;
+		SettingsForm settingsForm;
+		SplashForm splashForm = new SplashForm();
+
+		private static MainForm _mainFormInstance;
+		public static MainForm MainFormInstance { get => _mainFormInstance; set => _mainFormInstance = value; }
+		public Settings MainFormSettings { get => settings; set => settings = value; }
 
 		public MainForm()
 		{
 			InitializeComponent();
+			_mainFormInstance = this;
 			splashForm.Show();
 			this.WindowState = FormWindowState.Maximized;
+			if (File.Exists(fileName)) {
+				System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
+				StreamReader streamReader = new StreamReader(fileName, new System.Text.UTF8Encoding(false));
+				settings = (Settings)serializer.Deserialize(streamReader);
+				streamReader.Close();
+			} else {
+				settings.LeftUri = "https://twitter.com/";
+				settings.RightUri = "https://misskey.io/";
+				settings.Save(fileName);
+			}
 			ResizeComponent();
 			InitializeAsync();
 		}
@@ -77,14 +95,22 @@ namespace Dualverse
 			}
 		}
 
-		private void reloadButtonLeft_Click(object sender, EventArgs e)
+		public void reloadButtonLeft_Click(object sender, EventArgs e)
 		{
-			webView2Left.Reload();
+			webView2Left.CoreWebView2.Navigate(settings.LeftUri);
 		}
 
-		private void reloadButtonRight_Click(object sender, EventArgs e)
+		public void reloadButtonRight_Click(object sender, EventArgs e)
 		{
-			webView2Right.Reload();
+			webView2Right.CoreWebView2.Navigate(settings.RightUri);
+		}
+
+		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (settingsForm == null || settingsForm.IsDisposed) {
+				settingsForm = new SettingsForm(fileName);
+				settingsForm.Show();
+			}
 		}
 
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

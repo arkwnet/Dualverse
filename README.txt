@@ -1,7 +1,7 @@
 -----
 Dualverse
 
-Version 1.0.1
+Version 2.0.0
 Copyright (c) 2024 Sora Arakawa
 Licensed under the MIT License
 -----
@@ -19,11 +19,8 @@ OS: Windows 10 / 11
 CPU: Intelまたは同等の互換プロセッサ 2GHz以上 (マルチコアプロセッサを推奨)
 メモリ: 8GB以上
 ストレージ: 1GB以上の空き容量
-ディスプレイ: 1366×768ピクセル以上の解像度で色深度32bit True color以上表示可能なもの
-必須ランタイム: .NET Framework 4.7.2以降 (April 2018 Update以降のWindows 10とWindows 11は標準搭載)、Microsoft Edge WebView2 Runtime (April 2018 Update以降のWindows 10とWindows 11は標準搭載)
-対応サービス: X (旧Twitter)、Misskey.io
-ソースコードからのビルドで他サービスにも対応します。
-X Pro (旧TweetDeck) とmi.arkw.work (自宅サーバMisskey) も動作確認済。
+ディスプレイ: 1366×768ピクセル以上の解像度で色深度 32bit True color以上表示可能なもの
+対応サービス: X (旧Twitter)、X Pro (旧TweetDeck)、Bluesky、Threads、Misskey.io、mstdn.jp、Pawoo、fedibird 他
 
 # 連絡先
 E-Mail: mail@arkw.net
