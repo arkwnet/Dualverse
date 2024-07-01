@@ -1,7 +1,7 @@
 -----
 Dualverse
 
-Version 1.0.0
+Version 2.0.0
 Copyright (c) 2024 Sora Arakawa
 Licensed under the MIT License
 -----
@@ -20,9 +20,7 @@ CPU: Intelまたは同等の互換プロセッサ 2GHz以上 (マルチコアプ
 メモリ: 8GB以上
 ストレージ: 1GB以上の空き容量
 ディスプレイ: 1366×768ピクセル以上の解像度で色深度 32bit True color以上表示可能なもの
-対応サービス: X (旧Twitter)、Misskey.io
-ソースコードからのビルドで他サービスにも対応します。
-X Pro (旧TweetDeck) とmi.arkw.work (自宅サーバMisskey) も動作確認済。
+対応サービス: X (旧Twitter)、X Pro (旧TweetDeck)、Bluesky、Threads、Misskey.io、mstdn.jp、Pawoo、fedibird 他
 
 # 連絡先
 E-Mail: mail@arkw.net
