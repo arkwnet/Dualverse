@@ -37,13 +37,14 @@
 			this.serviceRightText = new System.Windows.Forms.TextBox();
 			this.serviceLeftButton = new System.Windows.Forms.Button();
 			this.serviceRightButton = new System.Windows.Forms.Button();
+			this.settingsLabel = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// serviceLabel
 			// 
 			this.serviceLabel.AutoSize = true;
 			this.serviceLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceLabel.Location = new System.Drawing.Point(20, 20);
+			this.serviceLabel.Location = new System.Drawing.Point(20, 70);
 			this.serviceLabel.Name = "serviceLabel";
 			this.serviceLabel.Size = new System.Drawing.Size(124, 25);
 			this.serviceLabel.TabIndex = 0;
@@ -53,7 +54,7 @@
 			// 
 			this.serviceLeftLabel.AutoSize = true;
 			this.serviceLeftLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceLeftLabel.Location = new System.Drawing.Point(21, 64);
+			this.serviceLeftLabel.Location = new System.Drawing.Point(21, 114);
 			this.serviceLeftLabel.Name = "serviceLeftLabel";
 			this.serviceLeftLabel.Size = new System.Drawing.Size(62, 21);
 			this.serviceLeftLabel.TabIndex = 1;
@@ -64,7 +65,7 @@
 			this.serviceLeftCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.serviceLeftCombo.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.serviceLeftCombo.FormattingEnabled = true;
-			this.serviceLeftCombo.Location = new System.Drawing.Point(90, 62);
+			this.serviceLeftCombo.Location = new System.Drawing.Point(90, 112);
 			this.serviceLeftCombo.Name = "serviceLeftCombo";
 			this.serviceLeftCombo.Size = new System.Drawing.Size(250, 29);
 			this.serviceLeftCombo.TabIndex = 2;
@@ -74,7 +75,7 @@
 			// 
 			this.serviceRightLabel.AutoSize = true;
 			this.serviceRightLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceRightLabel.Location = new System.Drawing.Point(371, 64);
+			this.serviceRightLabel.Location = new System.Drawing.Point(371, 114);
 			this.serviceRightLabel.Name = "serviceRightLabel";
 			this.serviceRightLabel.Size = new System.Drawing.Size(62, 21);
 			this.serviceRightLabel.TabIndex = 3;
@@ -85,7 +86,7 @@
 			this.serviceRightCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.serviceRightCombo.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.serviceRightCombo.FormattingEnabled = true;
-			this.serviceRightCombo.Location = new System.Drawing.Point(440, 62);
+			this.serviceRightCombo.Location = new System.Drawing.Point(440, 112);
 			this.serviceRightCombo.Name = "serviceRightCombo";
 			this.serviceRightCombo.Size = new System.Drawing.Size(250, 29);
 			this.serviceRightCombo.TabIndex = 4;
@@ -94,7 +95,7 @@
 			// serviceLeftText
 			// 
 			this.serviceLeftText.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceLeftText.Location = new System.Drawing.Point(90, 98);
+			this.serviceLeftText.Location = new System.Drawing.Point(90, 148);
 			this.serviceLeftText.Name = "serviceLeftText";
 			this.serviceLeftText.Size = new System.Drawing.Size(250, 29);
 			this.serviceLeftText.TabIndex = 5;
@@ -103,7 +104,7 @@
 			// serviceRightText
 			// 
 			this.serviceRightText.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceRightText.Location = new System.Drawing.Point(440, 98);
+			this.serviceRightText.Location = new System.Drawing.Point(440, 148);
 			this.serviceRightText.Name = "serviceRightText";
 			this.serviceRightText.Size = new System.Drawing.Size(250, 29);
 			this.serviceRightText.TabIndex = 6;
@@ -112,7 +113,7 @@
 			// serviceLeftButton
 			// 
 			this.serviceLeftButton.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceLeftButton.Location = new System.Drawing.Point(90, 134);
+			this.serviceLeftButton.Location = new System.Drawing.Point(90, 184);
 			this.serviceLeftButton.Name = "serviceLeftButton";
 			this.serviceLeftButton.Size = new System.Drawing.Size(120, 32);
 			this.serviceLeftButton.TabIndex = 7;
@@ -123,7 +124,7 @@
 			// serviceRightButton
 			// 
 			this.serviceRightButton.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceRightButton.Location = new System.Drawing.Point(440, 134);
+			this.serviceRightButton.Location = new System.Drawing.Point(440, 184);
 			this.serviceRightButton.Name = "serviceRightButton";
 			this.serviceRightButton.Size = new System.Drawing.Size(120, 32);
 			this.serviceRightButton.TabIndex = 8;
@@ -131,12 +132,23 @@
 			this.serviceRightButton.UseVisualStyleBackColor = true;
 			this.serviceRightButton.Click += new System.EventHandler(this.serviceRightButton_Click);
 			// 
+			// settingsLabel
+			// 
+			this.settingsLabel.AutoSize = true;
+			this.settingsLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.settingsLabel.Location = new System.Drawing.Point(20, 18);
+			this.settingsLabel.Name = "settingsLabel";
+			this.settingsLabel.Size = new System.Drawing.Size(71, 37);
+			this.settingsLabel.TabIndex = 9;
+			this.settingsLabel.Text = "設定";
+			// 
 			// SettingsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(784, 311);
+			this.Controls.Add(this.settingsLabel);
 			this.Controls.Add(this.serviceRightButton);
 			this.Controls.Add(this.serviceLeftButton);
 			this.Controls.Add(this.serviceRightText);
@@ -169,5 +181,6 @@
 		private System.Windows.Forms.TextBox serviceRightText;
 		private System.Windows.Forms.Button serviceLeftButton;
 		private System.Windows.Forms.Button serviceRightButton;
+		private System.Windows.Forms.Label settingsLabel;
 	}
 }
