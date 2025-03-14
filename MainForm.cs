@@ -25,6 +25,11 @@ namespace Dualverse
 			InitializeComponent();
 			_mainFormInstance = this;
 			splashForm.Show();
+			DispatcherTimer dispatcherTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(10) };
+			dispatcherTimer.Start();
+			dispatcherTimer.Tick += (s, args) => {
+				CloseSplashForm();
+			};
 			this.WindowState = FormWindowState.Maximized;
 			if (File.Exists(fileName)) {
 				System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
@@ -85,12 +90,15 @@ namespace Dualverse
 
 		private void CloseSplashForm()
 		{
-			if (status[0] == 1 && status[1] == 1) {
-				DispatcherTimer timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
-				timer.Start();
-				timer.Tick += (s, args) => {
-					timer.Stop();
-					splashForm.Close();
+			if (status[0] == 1 || status[1] == 1) {
+				DispatcherTimer dispatcherTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+				dispatcherTimer.Start();
+				dispatcherTimer.Tick += (s, args) =>
+				{
+					dispatcherTimer.Stop();
+					if (splashForm != null && splashForm.IsDisposed == false) {
+						splashForm.Dispose();
+					}
 				};
 			}
 		}
