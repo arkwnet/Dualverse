@@ -25,7 +25,7 @@ namespace Dualverse
 			InitializeComponent();
 			_mainFormInstance = this;
 			splashForm.Show();
-			DispatcherTimer dispatcherTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(10) };
+			DispatcherTimer dispatcherTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(7) };
 			dispatcherTimer.Start();
 			dispatcherTimer.Tick += (s, args) => {
 				CloseSplashForm();
@@ -90,17 +90,15 @@ namespace Dualverse
 
 		private void CloseSplashForm()
 		{
-			if (status[0] == 1 || status[1] == 1) {
-				DispatcherTimer dispatcherTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
-				dispatcherTimer.Start();
-				dispatcherTimer.Tick += (s, args) =>
-				{
-					dispatcherTimer.Stop();
-					if (splashForm != null && splashForm.IsDisposed == false) {
-						splashForm.Dispose();
-					}
-				};
-			}
+			DispatcherTimer dispatcherTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+			dispatcherTimer.Start();
+			dispatcherTimer.Tick += (s, args) =>
+			{
+				dispatcherTimer.Stop();
+				if (splashForm != null && splashForm.IsDisposed == false) {
+					splashForm.Dispose();
+				}
+			};
 		}
 
 		public void reloadButtonLeft_Click(object sender, EventArgs e)
