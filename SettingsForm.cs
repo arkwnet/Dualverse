@@ -10,7 +10,6 @@ namespace Dualverse
 		ServiceList serviceList = new ServiceList();
 		private MainForm mainFormInstance;
 
-
 		public SettingsForm(string fileName)
 		{
 			InitializeComponent();

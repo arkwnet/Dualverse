@@ -1,8 +1,8 @@
 -----
 Dualverse
 
-Version 2.0.0
-Copyright (c) 2024 Sora Arakawa
+Version 2.0.1
+Copyright (c) 2024, 2025 Sora Arakawa
 Licensed under the MIT License
 -----
 
