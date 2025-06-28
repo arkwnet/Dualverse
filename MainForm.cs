@@ -1,3 +1,4 @@
+using Dualverse.Properties;
 using Microsoft.Web.WebView2.Core;
 using System;
 using System.Diagnostics;
@@ -23,6 +24,7 @@ namespace Dualverse
 		public MainForm()
 		{
 			InitializeComponent();
+			LocalizeComponent();
 			_mainFormInstance = this;
 			splashForm.Show();
 			DispatcherTimer dispatcherTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(7) };
@@ -43,6 +45,14 @@ namespace Dualverse
 			}
 			ResizeComponent();
 			InitializeAsync();
+		}
+
+		private void LocalizeComponent()
+		{
+			fileToolStripMenuItem.Text = Resources.FileToolStripMenuItem;
+			settingsToolStripMenuItem.Text = Resources.SettingsToolStripMenuItem;
+			aboutToolStripMenuItem.Text = Resources.AboutToolStripMenuItem;
+			exitToolStripMenuItem.Text = Resources.ExitToolStripMenuItem;
 		}
 
 		private async void InitializeAsync()

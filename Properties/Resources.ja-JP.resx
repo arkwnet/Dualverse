@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutToolStripMenuItem" xml:space="preserve">
-    <value>&amp;About Dualverse</value>
+    <value>Dualverse について(&amp;A)</value>
   </data>
   <data name="ExitToolStripMenuItem" xml:space="preserve">
-    <value>E&amp;xit</value>
+    <value>終了(&amp;X)</value>
   </data>
   <data name="FileToolStripMenuItem" xml:space="preserve">
-    <value>&amp;File</value>
+    <value>ファイル(&amp;F)</value>
   </data>
   <data name="SettingsToolStripMenuItem" xml:space="preserve">
-    <value>&amp;Settings</value>
+    <value>設定(&amp;S)</value>
   </data>
 </root>

@@ -59,5 +59,41 @@ namespace Dualverse.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   &amp;About Dualverse に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string AboutToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("AboutToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   E&amp;xit に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExitToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("ExitToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &amp;File に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FileToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("FileToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &amp;Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("SettingsToolStripMenuItem", resourceCulture);
+            }
+        }
     }
 }
