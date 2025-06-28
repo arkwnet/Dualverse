@@ -1,3 +1,4 @@
+using Dualverse.Properties;
 using System.IO;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace Dualverse
 		public SettingsForm(string fileName)
 		{
 			InitializeComponent();
+			LocalizeComponent();
 			mainFormInstance = MainForm.MainFormInstance;
 			for (int i = 0; i < serviceList.Count(); i++) {
 				serviceLeftCombo.Items.Add(serviceList.Get(i).Name);
@@ -23,6 +25,17 @@ namespace Dualverse
 			serviceLeftText.Text = settings.LeftUri;
 			serviceRightText.Text = settings.RightUri;
 			UpdateCombo();
+		}
+
+		private void LocalizeComponent()
+		{
+			Text = Resources.SettingsLabel;
+			settingsLabel.Text = Resources.SettingsLabel;
+			serviceLabel.Text = Resources.ServiceLabel;
+			serviceLeftLabel.Text = Resources.ServiceLeftLabel;
+			serviceRightLabel.Text = Resources.ServiceRightLabel;
+			serviceLeftButton.Text = Resources.ServiceButton;
+			serviceRightButton.Text = Resources.ServiceButton;
 		}
 
 		private void UpdateCombo() {

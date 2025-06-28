@@ -53,6 +53,8 @@ namespace Dualverse
 			settingsToolStripMenuItem.Text = Resources.SettingsToolStripMenuItem;
 			aboutToolStripMenuItem.Text = Resources.AboutToolStripMenuItem;
 			exitToolStripMenuItem.Text = Resources.ExitToolStripMenuItem;
+			reloadButtonLeft.Text = Resources.ReloadButton;
+			reloadButtonRight.Text = Resources.ReloadButton;
 		}
 
 		private async void InitializeAsync()

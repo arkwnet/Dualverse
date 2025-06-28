@@ -61,6 +61,15 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
+        ///   About Dualverse に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string AboutForm {
+            get {
+                return ResourceManager.GetString("AboutForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   &amp;About Dualverse に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string AboutToolStripMenuItem {
@@ -84,6 +93,69 @@ namespace Dualverse.Properties {
         internal static string FileToolStripMenuItem {
             get {
                 return ResourceManager.GetString("FileToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Get source code (GitHub) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LinkLabel {
+            get {
+                return ResourceManager.GetString("LinkLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Reload に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ReloadButton {
+            get {
+                return ResourceManager.GetString("ReloadButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Update に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ServiceButton {
+            get {
+                return ResourceManager.GetString("ServiceButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Default service に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ServiceLabel {
+            get {
+                return ResourceManager.GetString("ServiceLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Left pane に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ServiceLeftLabel {
+            get {
+                return ResourceManager.GetString("ServiceLeftLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Right pane に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ServiceRightLabel {
+            get {
+                return ResourceManager.GetString("ServiceRightLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsLabel {
+            get {
+                return ResourceManager.GetString("SettingsLabel", resourceCulture);
             }
         }
         

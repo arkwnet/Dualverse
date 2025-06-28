@@ -1,3 +1,4 @@
+using Dualverse.Properties;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -8,9 +9,16 @@ namespace Dualverse
 		public AboutForm()
 		{
 			InitializeComponent();
+			LocalizeComponent();
 			FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location);
 			versionLabel.Text = "Version " + fileVersionInfo.FileMajorPart + "." + fileVersionInfo.FileMinorPart + "." + fileVersionInfo.FileBuildPart;
 			copyrightLabel1.Text = fileVersionInfo.LegalCopyright + ".";
+		}
+
+		private void LocalizeComponent()
+		{
+			Text = Resources.AboutForm;
+			linkLabel1.Text = Resources.LinkLabel;
 		}
 
 		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
