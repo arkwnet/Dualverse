@@ -33,12 +33,17 @@ namespace Dualverse
 				CloseSplashForm();
 			};
 			this.WindowState = FormWindowState.Maximized;
+			bool isResetSettings = true;
 			if (File.Exists(fileName)) {
 				System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
 				StreamReader streamReader = new StreamReader(fileName, new System.Text.UTF8Encoding(false));
 				settings = (Settings)serializer.Deserialize(streamReader);
 				streamReader.Close();
-			} else {
+				if (settings.LeftUri != "" && settings.RightUri != "") {
+					isResetSettings = false;
+				}
+			}
+			if (isResetSettings == true) {
 				settings.LeftUri = "https://twitter.com/";
 				settings.RightUri = "https://misskey.io/";
 				settings.Save(fileName);
