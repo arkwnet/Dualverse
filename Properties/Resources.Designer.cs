@@ -61,7 +61,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   About Dualverse に類似しているローカライズされた文字列を検索します。
+        ///   Dualverse について に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string AboutForm {
             get {
@@ -70,7 +70,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   &amp;About Dualverse に類似しているローカライズされた文字列を検索します。
+        ///   Dualverse について(&amp;A) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string AboutToolStripMenuItem {
             get {
@@ -79,7 +79,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   E&amp;xit に類似しているローカライズされた文字列を検索します。
+        ///   終了(&amp;X) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExitToolStripMenuItem {
             get {
@@ -88,7 +88,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   &amp;File に類似しているローカライズされた文字列を検索します。
+        ///   ファイル(&amp;F) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string FileToolStripMenuItem {
             get {
@@ -97,7 +97,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   Get source code (GitHub) に類似しているローカライズされた文字列を検索します。
+        ///   ソースコードを取得 (GitHub) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LinkLabel {
             get {
@@ -106,7 +106,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   Reload に類似しているローカライズされた文字列を検索します。
+        ///   再読み込み に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ReloadButton {
             get {
@@ -115,7 +115,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   Update に類似しているローカライズされた文字列を検索します。
+        ///   更新 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ServiceButton {
             get {
@@ -124,7 +124,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   Default service に類似しているローカライズされた文字列を検索します。
+        ///   既定のサービス に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ServiceLabel {
             get {
@@ -133,7 +133,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   Left pane に類似しているローカライズされた文字列を検索します。
+        ///   左ペイン に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ServiceLeftLabel {
             get {
@@ -142,7 +142,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   Right pane に類似しているローカライズされた文字列を検索します。
+        ///   右ペイン に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ServiceRightLabel {
             get {
@@ -151,7 +151,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   Settings に類似しているローカライズされた文字列を検索します。
+        ///   設定 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsLabel {
             get {
@@ -160,7 +160,7 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
-        ///   &amp;Settings に類似しているローカライズされた文字列を検索します。
+        ///   設定(&amp;S) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsToolStripMenuItem {
             get {

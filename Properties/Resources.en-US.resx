@@ -118,39 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutForm" xml:space="preserve">
-    <value>Dualverse について</value>
+    <value>About Dualverse</value>
   </data>
   <data name="AboutToolStripMenuItem" xml:space="preserve">
-    <value>Dualverse について(&amp;A)</value>
+    <value>&amp;About Dualverse</value>
   </data>
   <data name="ExitToolStripMenuItem" xml:space="preserve">
-    <value>終了(&amp;X)</value>
+    <value>E&amp;xit</value>
   </data>
   <data name="FileToolStripMenuItem" xml:space="preserve">
-    <value>ファイル(&amp;F)</value>
+    <value>&amp;File</value>
   </data>
   <data name="LinkLabel" xml:space="preserve">
-    <value>ソースコードを取得 (GitHub)</value>
+    <value>Get source code (GitHub)</value>
   </data>
   <data name="ReloadButton" xml:space="preserve">
-    <value>再読み込み</value>
+    <value>Reload</value>
   </data>
   <data name="ServiceButton" xml:space="preserve">
-    <value>更新</value>
+    <value>Update</value>
   </data>
   <data name="ServiceLabel" xml:space="preserve">
-    <value>既定のサービス</value>
+    <value>Default service</value>
   </data>
   <data name="ServiceLeftLabel" xml:space="preserve">
-    <value>左ペイン</value>
+    <value>Left pane</value>
   </data>
   <data name="ServiceRightLabel" xml:space="preserve">
-    <value>右ペイン</value>
+    <value>Right pane</value>
   </data>
   <data name="SettingsLabel" xml:space="preserve">
-    <value>設定</value>
+    <value>Settings</value>
   </data>
   <data name="SettingsToolStripMenuItem" xml:space="preserve">
-    <value>設定(&amp;S)</value>
+    <value>&amp;Settings</value>
   </data>
 </root>

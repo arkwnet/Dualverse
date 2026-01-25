@@ -1,4 +1,4 @@
-﻿namespace Dualverse
+namespace Dualverse
 {
 	partial class SettingsForm
 	{
@@ -38,6 +38,9 @@
 			this.serviceLeftButton = new System.Windows.Forms.Button();
 			this.serviceRightButton = new System.Windows.Forms.Button();
 			this.settingsLabel = new System.Windows.Forms.Label();
+			this.languageLabel = new System.Windows.Forms.Label();
+			this.languageCombo = new System.Windows.Forms.ComboBox();
+			this.languageDescriptionLabel = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// serviceLabel
@@ -142,12 +145,46 @@
 			this.settingsLabel.TabIndex = 9;
 			this.settingsLabel.Text = "設定";
 			// 
+			// languageLabel
+			// 
+			this.languageLabel.AutoSize = true;
+			this.languageLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.languageLabel.Location = new System.Drawing.Point(20, 250);
+			this.languageLabel.Name = "languageLabel";
+			this.languageLabel.Size = new System.Drawing.Size(50, 25);
+			this.languageLabel.TabIndex = 10;
+			this.languageLabel.Text = "言語";
+			// 
+			// languageCombo
+			// 
+			this.languageCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.languageCombo.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.languageCombo.FormattingEnabled = true;
+			this.languageCombo.Location = new System.Drawing.Point(20, 320);
+			this.languageCombo.Name = "languageCombo";
+			this.languageCombo.Size = new System.Drawing.Size(250, 29);
+			this.languageCombo.TabIndex = 11;
+			this.languageCombo.SelectedIndexChanged += new System.EventHandler(this.languageCombo_SelectedIndexChanged);
+			// 
+			// languageDescriptionLabel
+			// 
+			this.languageDescriptionLabel.AutoSize = true;
+			this.languageDescriptionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.languageDescriptionLabel.Location = new System.Drawing.Point(20, 280);
+			this.languageDescriptionLabel.Name = "languageDescriptionLabel";
+			this.languageDescriptionLabel.Size = new System.Drawing.Size(428, 21);
+			this.languageDescriptionLabel.TabIndex = 12;
+			this.languageDescriptionLabel.Text = "Dualverseがメニューやメッセージを表示する際の言語を選択します。";
+			// 
 			// SettingsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(784, 311);
+			this.ClientSize = new System.Drawing.Size(784, 401);
+			this.Controls.Add(this.languageDescriptionLabel);
+			this.Controls.Add(this.languageCombo);
+			this.Controls.Add(this.languageLabel);
 			this.Controls.Add(this.settingsLabel);
 			this.Controls.Add(this.serviceRightButton);
 			this.Controls.Add(this.serviceLeftButton);
@@ -182,5 +219,8 @@
 		private System.Windows.Forms.Button serviceLeftButton;
 		private System.Windows.Forms.Button serviceRightButton;
 		private System.Windows.Forms.Label settingsLabel;
+		private System.Windows.Forms.Label languageLabel;
+		private System.Windows.Forms.ComboBox languageCombo;
+		private System.Windows.Forms.Label languageDescriptionLabel;
 	}
 }

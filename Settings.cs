@@ -1,4 +1,3 @@
-using Dualverse.Properties;
 using System.IO;
 
 namespace Dualverse
@@ -7,6 +6,7 @@ namespace Dualverse
 	{
 		private string leftUri;
 		private string rightUri;
+		private string language;
 
 		public string LeftUri
 		{
@@ -20,10 +20,17 @@ namespace Dualverse
 			set { rightUri = value; }
 		}
 
+		public string Language
+		{
+			get { return language; }
+			set { language = value; }
+		}
+
 		public Settings()
 		{
 			leftUri = "";
 			rightUri = "";
+			language = "";
 		}
 
 		public void Save(string fileName)

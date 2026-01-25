@@ -2,7 +2,9 @@ using Dualverse.Properties;
 using Microsoft.Web.WebView2.Core;
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Threading;
 
@@ -13,6 +15,7 @@ namespace Dualverse
 		int[] status = { 0, 0 };
 		private const string fileName = "Dualverse.sav";
 		Settings settings = new Settings();
+		LanguageList languageList = new LanguageList();
 		AboutForm aboutForm;
 		SettingsForm settingsForm;
 		SplashForm splashForm = new SplashForm();
@@ -23,6 +26,30 @@ namespace Dualverse
 
 		public MainForm()
 		{
+			bool isResetSettings = true;
+			if (File.Exists(fileName)) {
+				System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
+				StreamReader streamReader = new StreamReader(fileName, new System.Text.UTF8Encoding(false));
+				settings = (Settings)serializer.Deserialize(streamReader);
+				streamReader.Close();
+				if (settings.LeftUri != "" && settings.RightUri != "" && settings.Language != "") {
+					isResetSettings = false;
+				}
+			}
+			if (isResetSettings == true) {
+				settings.LeftUri = "https://twitter.com/";
+				settings.RightUri = "https://misskey.io/";
+				settings.Language = "en-US";
+				CultureInfo cultureInfo = CultureInfo.CurrentCulture;
+				for (int i = 0; i < languageList.Count(); i++) {
+					if (languageList.Get(i).Code == cultureInfo.Name) {
+						settings.Language = cultureInfo.Name;
+						break;
+					}
+				}
+				settings.Save(fileName);
+			}
+			Thread.CurrentThread.CurrentCulture = new CultureInfo(settings.Language);
 			InitializeComponent();
 			LocalizeComponent();
 			_mainFormInstance = this;
@@ -33,21 +60,6 @@ namespace Dualverse
 				CloseSplashForm();
 			};
 			this.WindowState = FormWindowState.Maximized;
-			bool isResetSettings = true;
-			if (File.Exists(fileName)) {
-				System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
-				StreamReader streamReader = new StreamReader(fileName, new System.Text.UTF8Encoding(false));
-				settings = (Settings)serializer.Deserialize(streamReader);
-				streamReader.Close();
-				if (settings.LeftUri != "" && settings.RightUri != "") {
-					isResetSettings = false;
-				}
-			}
-			if (isResetSettings == true) {
-				settings.LeftUri = "https://twitter.com/";
-				settings.RightUri = "https://misskey.io/";
-				settings.Save(fileName);
-			}
 			ResizeComponent();
 			InitializeAsync();
 		}

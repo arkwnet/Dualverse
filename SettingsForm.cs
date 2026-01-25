@@ -1,5 +1,7 @@
 using Dualverse.Properties;
+using System.Globalization;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Dualverse
@@ -9,6 +11,7 @@ namespace Dualverse
 		string fileName;
 		Settings settings;
 		ServiceList serviceList = new ServiceList();
+		LanguageList languageList = new LanguageList();
 		private MainForm mainFormInstance;
 
 		public SettingsForm(string fileName)
@@ -21,6 +24,9 @@ namespace Dualverse
 				serviceRightCombo.Items.Add(serviceList.Get(i).Name);
 			}
 			settings = mainFormInstance.MainFormSettings;
+			for (int i = 0; i < languageList.Count(); i++) {
+				languageCombo.Items.Add(languageList.Get(i).Name);
+			}
 			this.fileName = fileName;
 			serviceLeftText.Text = settings.LeftUri;
 			serviceRightText.Text = settings.RightUri;
@@ -56,6 +62,12 @@ namespace Dualverse
 			}
 			if (hitRight == false) {
 				serviceRightCombo.SelectedIndex = serviceRightCombo.Items.Count - 1;
+			}
+			for (int i = 0; i < languageList.Count(); i++) {
+				if (languageList.Get(i).Code == settings.Language) {
+					languageCombo.SelectedIndex = i;
+					break;
+				}
 			}
 		}
 
@@ -95,6 +107,13 @@ namespace Dualverse
 		private void serviceRightText_TextChanged(object sender, System.EventArgs e)
 		{
 			UpdateCombo();
+		}
+
+		private void languageCombo_SelectedIndexChanged(object sender, System.EventArgs e)
+		{
+			mainFormInstance.MainFormSettings.Language = languageList.Get(languageCombo.SelectedIndex).Code;
+			mainFormInstance.MainFormSettings.Save(fileName);
+			Thread.CurrentThread.CurrentCulture = new CultureInfo(mainFormInstance.MainFormSettings.Language);
 		}
 	}
 }
