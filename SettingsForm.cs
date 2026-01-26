@@ -113,7 +113,8 @@ namespace Dualverse
 		{
 			mainFormInstance.MainFormSettings.Language = languageList.Get(languageCombo.SelectedIndex).Code;
 			mainFormInstance.MainFormSettings.Save(fileName);
-			Thread.CurrentThread.CurrentCulture = new CultureInfo(mainFormInstance.MainFormSettings.Language);
+			Thread.CurrentThread.CurrentUICulture = new CultureInfo(mainFormInstance.MainFormSettings.Language);
+			LocalizeComponent();
 		}
 	}
 }

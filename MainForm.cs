@@ -49,7 +49,7 @@ namespace Dualverse
 				}
 				settings.Save(fileName);
 			}
-			Thread.CurrentThread.CurrentCulture = new CultureInfo(settings.Language);
+			Thread.CurrentThread.CurrentUICulture = new CultureInfo(settings.Language);
 			InitializeComponent();
 			LocalizeComponent();
 			_mainFormInstance = this;
