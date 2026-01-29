@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Dualverse")]
-[assembly: AssemblyCopyright("Copyright (c) 2024, 2025 Sora Arakawa")]
+[assembly: AssemblyCopyright("Copyright (c) 2024-2026 Sora Arakawa")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
