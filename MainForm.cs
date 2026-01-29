@@ -32,7 +32,7 @@ namespace Dualverse
 				StreamReader streamReader = new StreamReader(fileName, new System.Text.UTF8Encoding(false));
 				settings = (Settings)serializer.Deserialize(streamReader);
 				streamReader.Close();
-				if (settings.LeftUri != "" && settings.RightUri != "" && settings.Language != "") {
+				if (settings.Language != "") {
 					isResetSettings = false;
 				}
 			}
@@ -77,10 +77,10 @@ namespace Dualverse
 		private async void InitializeAsync()
 		{
 			await webView2Left.EnsureCoreWebView2Async(null);
-			webView2Left.CoreWebView2.Navigate(settings.LeftUri);
+			ReloadLeft();
 			webView2Left.CoreWebView2.NewWindowRequested += NewWindowRequested;
 			await webView2Right.EnsureCoreWebView2Async(null);
-			webView2Right.CoreWebView2.Navigate(settings.RightUri);
+			ReloadRight();
 			webView2Right.CoreWebView2.NewWindowRequested += NewWindowRequested;
 		}
 
@@ -132,12 +132,28 @@ namespace Dualverse
 
 		public void reloadButtonLeft_Click(object sender, EventArgs e)
 		{
-			webView2Left.CoreWebView2.Navigate(settings.LeftUri);
+			ReloadLeft();
 		}
 
 		public void reloadButtonRight_Click(object sender, EventArgs e)
 		{
-			webView2Right.CoreWebView2.Navigate(settings.RightUri);
+			ReloadRight();
+		}
+
+		private void ReloadLeft() {
+			if (settings.LeftUri != "") {
+				webView2Left.CoreWebView2.Navigate(settings.LeftUri);
+			} else {
+				webView2Left.CoreWebView2.Navigate("about:blank");
+			}
+		}
+
+		private void ReloadRight() {
+			if (settings.RightUri != "") {
+				webView2Right.CoreWebView2.Navigate(settings.RightUri);
+			} else {
+				webView2Right.CoreWebView2.Navigate("about:blank");
+			}
 		}
 
 		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
