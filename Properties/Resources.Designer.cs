@@ -97,6 +97,24 @@ namespace Dualverse.Properties {
         }
         
         /// <summary>
+        ///   Dualverseがメニューやメッセージを表示する際の言語を選択します。 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LanguageDescriptionLabel {
+            get {
+                return ResourceManager.GetString("LanguageDescriptionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   言語 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LanguageLabel {
+            get {
+                return ResourceManager.GetString("LanguageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ソースコードを取得 (GitHub) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LinkLabel {

@@ -153,4 +153,10 @@
   <data name="SettingsToolStripMenuItem" xml:space="preserve">
     <value>&amp;Settings</value>
   </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageDescriptionLabel" xml:space="preserve">
+    <value>Select the language for displaying menus and messages in Dualverse.</value>
+  </data>
 </root>

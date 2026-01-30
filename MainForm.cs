@@ -64,7 +64,7 @@ namespace Dualverse
 			InitializeAsync();
 		}
 
-		private void LocalizeComponent()
+		public void LocalizeComponent()
 		{
 			fileToolStripMenuItem.Text = Resources.FileToolStripMenuItem;
 			settingsToolStripMenuItem.Text = Resources.SettingsToolStripMenuItem;

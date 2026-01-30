@@ -41,6 +41,8 @@ namespace Dualverse
 			serviceRightLabel.Text = Resources.ServiceRightLabel;
 			serviceLeftButton.Text = Resources.ServiceButton;
 			serviceRightButton.Text = Resources.ServiceButton;
+			languageLabel.Text = Resources.LanguageLabel;
+			languageDescriptionLabel.Text = Resources.LanguageDescriptionLabel;
 		}
 
 		private void UpdateCombo() {
@@ -114,6 +116,7 @@ namespace Dualverse
 			mainFormInstance.MainFormSettings.Save(fileName);
 			Thread.CurrentThread.CurrentUICulture = new CultureInfo(mainFormInstance.MainFormSettings.Language);
 			LocalizeComponent();
+			mainFormInstance.LocalizeComponent();
 		}
 	}
 }
