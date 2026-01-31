@@ -1,5 +1,5 @@
 using Dualverse.Properties;
-using System;
+using System.Drawing;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
@@ -17,7 +17,6 @@ namespace Dualverse
 		public SettingsForm(string fileName)
 		{
 			InitializeComponent();
-			LocalizeComponent();
 			mainFormInstance = MainForm.MainFormInstance;
 			for (int i = 0; i < serviceList.Count(); i++) {
 				serviceLeftCombo.Items.Add(serviceList.Get(i).Name);
@@ -31,6 +30,7 @@ namespace Dualverse
 			serviceLeftText.Text = settings.LeftUri;
 			serviceRightText.Text = settings.RightUri;
 			UpdateCombo();
+			LocalizeComponent();
 		}
 
 		private void LocalizeComponent()
@@ -44,6 +44,11 @@ namespace Dualverse
 			serviceRightButton.Text = Resources.ServiceButton;
 			languageLabel.Text = Resources.LanguageLabel;
 			languageDescriptionLabel.Text = Resources.LanguageDescriptionLabel;
+			string font = languageList.Get(languageCombo.SelectedIndex).Font;
+			settingsLabel.Font = new Font(font, settingsLabel.Font.Size, FontStyle.Bold);
+			serviceLabel.Font = new Font(font, serviceLabel.Font.Size, FontStyle.Bold);
+			languageLabel.Font = new Font(font, languageLabel.Font.Size, FontStyle.Bold);
+			languageDescriptionLabel.Font = new Font(font, languageDescriptionLabel.Font.Size);
 		}
 
 		private void UpdateCombo() {

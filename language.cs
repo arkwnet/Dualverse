@@ -4,6 +4,7 @@ namespace Dualverse
 	{
 		private string name;
 		private string code;
+		private string font;
 
 		public string Name
 		{
@@ -17,10 +18,17 @@ namespace Dualverse
 			set { code = value; }
 		}
 
-		public Language(string name, string code)
+		public string Font
+		{
+			get { return font; }
+			set { font = value; }
+		}
+
+		public Language(string name, string code, string font)
 		{
 			this.name = name;
 			this.code = code;
+			this.font = font;
 		}
 	}
 }

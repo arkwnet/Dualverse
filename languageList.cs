@@ -8,10 +8,10 @@ namespace Dualverse
 
 		public LanguageList()
 		{
-			languageList.Add(new Language("日本語", "ja-JP"));
-			languageList.Add(new Language("English", "en-US"));
-			languageList.Add(new Language("简体中文", "zh-CN"));
-			languageList.Add(new Language("繁體中文", "zh-TW"));
+			languageList.Add(new Language("日本語", "ja-JP", "Yu Gothic UI"));
+			languageList.Add(new Language("English", "en-US", "Segoe UI"));
+			languageList.Add(new Language("简体中文", "zh-CN", "Microsoft YaHei UI"));
+			languageList.Add(new Language("繁體中文", "zh-TW", "Microsoft JhengHei UI"));
 		}
 
 		public int Count()
