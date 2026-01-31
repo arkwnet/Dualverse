@@ -68,7 +68,7 @@ namespace Dualverse
 			this.serviceLeftCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.serviceLeftCombo.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.serviceLeftCombo.FormattingEnabled = true;
-			this.serviceLeftCombo.Location = new System.Drawing.Point(90, 112);
+			this.serviceLeftCombo.Location = new System.Drawing.Point(120, 112);
 			this.serviceLeftCombo.Name = "serviceLeftCombo";
 			this.serviceLeftCombo.Size = new System.Drawing.Size(250, 29);
 			this.serviceLeftCombo.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace Dualverse
 			// 
 			this.serviceRightLabel.AutoSize = true;
 			this.serviceRightLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceRightLabel.Location = new System.Drawing.Point(371, 114);
+			this.serviceRightLabel.Location = new System.Drawing.Point(401, 114);
 			this.serviceRightLabel.Name = "serviceRightLabel";
 			this.serviceRightLabel.Size = new System.Drawing.Size(62, 21);
 			this.serviceRightLabel.TabIndex = 3;
@@ -89,7 +89,7 @@ namespace Dualverse
 			this.serviceRightCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.serviceRightCombo.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.serviceRightCombo.FormattingEnabled = true;
-			this.serviceRightCombo.Location = new System.Drawing.Point(440, 112);
+			this.serviceRightCombo.Location = new System.Drawing.Point(500, 112);
 			this.serviceRightCombo.Name = "serviceRightCombo";
 			this.serviceRightCombo.Size = new System.Drawing.Size(250, 29);
 			this.serviceRightCombo.TabIndex = 4;
@@ -98,7 +98,7 @@ namespace Dualverse
 			// serviceLeftText
 			// 
 			this.serviceLeftText.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceLeftText.Location = new System.Drawing.Point(90, 148);
+			this.serviceLeftText.Location = new System.Drawing.Point(120, 148);
 			this.serviceLeftText.Name = "serviceLeftText";
 			this.serviceLeftText.Size = new System.Drawing.Size(250, 29);
 			this.serviceLeftText.TabIndex = 5;
@@ -107,7 +107,7 @@ namespace Dualverse
 			// serviceRightText
 			// 
 			this.serviceRightText.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceRightText.Location = new System.Drawing.Point(440, 148);
+			this.serviceRightText.Location = new System.Drawing.Point(500, 148);
 			this.serviceRightText.Name = "serviceRightText";
 			this.serviceRightText.Size = new System.Drawing.Size(250, 29);
 			this.serviceRightText.TabIndex = 6;
@@ -116,7 +116,7 @@ namespace Dualverse
 			// serviceLeftButton
 			// 
 			this.serviceLeftButton.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceLeftButton.Location = new System.Drawing.Point(90, 184);
+			this.serviceLeftButton.Location = new System.Drawing.Point(120, 184);
 			this.serviceLeftButton.Name = "serviceLeftButton";
 			this.serviceLeftButton.Size = new System.Drawing.Size(120, 32);
 			this.serviceLeftButton.TabIndex = 7;
@@ -127,7 +127,7 @@ namespace Dualverse
 			// serviceRightButton
 			// 
 			this.serviceRightButton.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.serviceRightButton.Location = new System.Drawing.Point(440, 184);
+			this.serviceRightButton.Location = new System.Drawing.Point(500, 184);
 			this.serviceRightButton.Name = "serviceRightButton";
 			this.serviceRightButton.Size = new System.Drawing.Size(120, 32);
 			this.serviceRightButton.TabIndex = 8;
@@ -160,7 +160,7 @@ namespace Dualverse
 			this.languageCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.languageCombo.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.languageCombo.FormattingEnabled = true;
-			this.languageCombo.Location = new System.Drawing.Point(20, 320);
+			this.languageCombo.Location = new System.Drawing.Point(25, 320);
 			this.languageCombo.Name = "languageCombo";
 			this.languageCombo.Size = new System.Drawing.Size(250, 29);
 			this.languageCombo.TabIndex = 11;
@@ -170,7 +170,7 @@ namespace Dualverse
 			// 
 			this.languageDescriptionLabel.AutoSize = true;
 			this.languageDescriptionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.languageDescriptionLabel.Location = new System.Drawing.Point(20, 280);
+			this.languageDescriptionLabel.Location = new System.Drawing.Point(21, 280);
 			this.languageDescriptionLabel.Name = "languageDescriptionLabel";
 			this.languageDescriptionLabel.Size = new System.Drawing.Size(428, 21);
 			this.languageDescriptionLabel.TabIndex = 12;

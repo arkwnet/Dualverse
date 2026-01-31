@@ -1,4 +1,5 @@
 using Dualverse.Properties;
+using System;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
@@ -117,6 +118,9 @@ namespace Dualverse
 			Thread.CurrentThread.CurrentUICulture = new CultureInfo(mainFormInstance.MainFormSettings.Language);
 			LocalizeComponent();
 			mainFormInstance.LocalizeComponent();
+			if (mainFormInstance.aboutForm != null) {
+				mainFormInstance.aboutForm.LocalizeComponent();
+			}
 		}
 	}
 }

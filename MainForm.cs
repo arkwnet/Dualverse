@@ -16,10 +16,9 @@ namespace Dualverse
 		private const string fileName = "Dualverse.sav";
 		Settings settings = new Settings();
 		LanguageList languageList = new LanguageList();
-		AboutForm aboutForm;
-		SettingsForm settingsForm;
 		SplashForm splashForm = new SplashForm();
-
+		SettingsForm settingsForm;
+		public AboutForm aboutForm { get; private set; }
 		private static MainForm _mainFormInstance;
 		public static MainForm MainFormInstance { get => _mainFormInstance; set => _mainFormInstance = value; }
 		public Settings MainFormSettings { get => settings; set => settings = value; }
@@ -160,7 +159,7 @@ namespace Dualverse
 		{
 			if (settingsForm == null || settingsForm.IsDisposed) {
 				settingsForm = new SettingsForm(fileName);
-				settingsForm.Show();
+				settingsForm.Show(this);
 			}
 		}
 
@@ -168,7 +167,7 @@ namespace Dualverse
 		{
 			if (aboutForm == null || aboutForm.IsDisposed) {
 				aboutForm = new AboutForm();
-				aboutForm.Show();
+				aboutForm.Show(this);
 			}
 		}
 

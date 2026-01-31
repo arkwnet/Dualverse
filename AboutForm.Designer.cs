@@ -1,4 +1,4 @@
-﻿namespace Dualverse
+namespace Dualverse
 {
 	partial class AboutForm
 	{
@@ -110,7 +110,6 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Dualverse について";
-			this.TopMost = true;
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

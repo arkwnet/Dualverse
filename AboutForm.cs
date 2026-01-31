@@ -15,7 +15,7 @@ namespace Dualverse
 			copyrightLabel1.Text = fileVersionInfo.LegalCopyright + ".";
 		}
 
-		private void LocalizeComponent()
+		public void LocalizeComponent()
 		{
 			Text = Resources.AboutForm;
 			linkLabel1.Text = Resources.LinkLabel;
